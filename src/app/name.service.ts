@@ -10,6 +10,6 @@ export class NameService {
   constructor(private http:HttpClient) { }
 
   onSendService(fromData: FormData):Observable<any>{
-    return this.http.post<any>('http://localhost:3006/angular.php', fromData);
+    return this.http.post<any>('https://ketubah/kalendar/angular.php', fromData);
   }
 }
