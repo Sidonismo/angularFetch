@@ -10,8 +10,8 @@ export class NameService {
   constructor(private http:HttpClient) { }
 
   onSendService(fromData: FormData):Observable<any>{
-    if (/[(localhost)]/.test(location.hostname))
-    return this.http.post<any>('http://localhost:3006/angular.php', fromData);
-    else return this.http.post<any>('https://ketubah.cz/kalendar/angular.php', fromData);
+    if (/[(github)]/.test(location.hostname))
+    return this.http.post<any>('https://ketubah.cz/kalendar/angular.php', fromData);
+    else return this.http.post<any>('http://localhost:3006/angular.php', fromData);
   }
 }
